@@ -54,7 +54,7 @@
         var initialiseCkEditor = function () {
 
           // Sync view on specific events.
-          ['dataReady', 'change', 'blur', 'saveSnapshot'].forEach(function (event) {
+          ['dataReady', 'change', 'blur', 'saveSnapshot', 'key'].forEach(function (event) {
             controller.onCKEvent(event, function syncView() {
               controller.modelController.$setViewValue(controller.instance.getData() || '');
             });
